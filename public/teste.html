@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Um teste do eTrack</title>
+	<script type="text/javascript" src="http://localhost:3030/javascripts/etrack.js"></script>
+	<script type="text/javascript">
+		var track;
+		window.onload = function() {
+			track = new eTrack();
+			track.session = '123123';
+			var i, els;
+			for (i in els = document.getElementsByTagName('a')) {
+				els[i].onclick = function() {
+					track.save(this.getAttribute('act'));
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<a href="#" act="login">Login</a><br />
+	<a href="#" act="logout">Logout</a><br />
+	<a href="#" act="new_course">Novo Curso</a><br />
+</body>
+</html>
