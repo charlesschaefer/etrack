@@ -1,4 +1,4 @@
-var eTrack = function(srv_addr) {
+function eTrack(srv_addr) {
 	this.session = null;
 	this.actions = {};
 	var address = (srv_addr ? srv_addr : 'http://localhost:3030/track/');
