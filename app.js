@@ -33,7 +33,7 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-app.get('/track/:typo/:session', track.track);
+app.get('/track/:type/:session', track.track);
 
 
 app.listen(3030, function(){

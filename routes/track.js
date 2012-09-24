@@ -1,12 +1,12 @@
 
 exports.track = function(req, res) {
-	var tipo = req.params.tipo;
+	var type = req.params.type;
 	var session = req.params.session;
 	var Track = require('../models/track').Track;
 
 	var t = new Track({
 		user:session, 
-		action: tipo
+		action: type
 	});
 	t.save(function(err) {
 		res.contentType('application/json');
